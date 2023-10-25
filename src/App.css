@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  margin-top: 200px;
+}
+.Description {
+  list-style: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -30,4 +34,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.SearchBar {
+  text-align: center;
+  margin: 20px;
+}
+.Temp {
+  display: flex;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(4, 1fr);
 }
