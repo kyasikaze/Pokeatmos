@@ -35,7 +35,7 @@ export default function Weather() {
     return (
       <div className="App">
         {form}
-        <ul className="Description">
+        <ul className="Description infoBox shadow">
           <li>{weather.name}</li>
           <li>{weather.icon}</li>
           <li>{Math.round(weather.temperature)}°C</li>
