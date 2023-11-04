@@ -27,8 +27,12 @@ export default function Weather() {
   }
   let form = (
     <form className="App" onSubmit={handleSubmit}>
-      <input type="search" onChange={updateCity}></input>
-      <input type="submit"></input>
+      <input type="search" className="searchBar" onChange={updateCity}></input>
+      <input
+        type="submit"
+        value="Submit"
+        className="btn btn-outline-light"
+      ></input>
     </form>
   );
   if (loaded) {
@@ -36,7 +40,7 @@ export default function Weather() {
       <div className="App">
         {form}
         <ul className="Description infoBox shadow">
-          <li>{weather.name}</li>
+          <li className="cityName">{weather.name}</li>
           <li>{weather.icon}</li>
           <li>{Math.round(weather.temperature)}°C</li>
           <li>{weather.description}</li>

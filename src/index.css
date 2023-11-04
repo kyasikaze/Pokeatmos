@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Handjet&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
 body {
   background-color: #263238;
   color: white;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "VT323", monospace;
+  font-size: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -21,8 +21,8 @@ footer {
   font-family: "Handjet", cursive;
   font-size: 20px;
   letter-spacing: 2px;
-  margin: 50px auto;
-  margin-top: 230px;
+  margin: 40px auto;
+  margin-top: 190px;
   border-radius: 10px;
   max-width: 800px;
   text-align: center;
