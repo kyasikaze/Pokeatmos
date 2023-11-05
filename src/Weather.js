@@ -9,17 +9,17 @@ export default function Weather() {
   function displayForecast(response) {
     setLoaded(true);
     setWeather({
-      name: response.data.name,
-      temperature: response.data.main.temp,
-      description: response.data.weather[0].description,
-      humidity: response.data.main.humidity,
+      name: response.data.city,
+      temperature: response.data.temperature.current,
+      description: response.data.condition.description,
+      humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
+      icon: response.data.condition.icon_url,
     });
   }
   function handleSubmit(event) {
     event.preventDefault();
-    let apiKey = "eb9542c65e739e0fb25ade97c749e2aa";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=b01ffcc8e0f35c8a34d9t4ee3f03o916&units=metric`;
     axios.get(url).then(displayForecast);
   }
   function updateCity(event) {
@@ -37,16 +37,22 @@ export default function Weather() {
   );
   if (loaded) {
     return (
-      <div className="App">
+      <div className="App container">
         {form}
-        <ul className="Description infoBox shadow">
-          <li className="cityName">{weather.name}</li>
-          <li>{weather.icon}</li>
-          <li>{Math.round(weather.temperature)}°C</li>
-          <li>{weather.description}</li>
-          <li>Humidity: {weather.humidity}%</li>
-          <li>Wind: {weather.wind}km/h</li>
-        </ul>
+        <div className="row infoBox shadow">
+          <div className="col">
+            <ul className="Description">
+              <li className="cityName">{weather.name}</li>
+              <li>{Math.round(weather.temperature)}°C</li>
+              <li>{weather.description}</li>
+              <li>Humidity: {weather.humidity}%</li>
+              <li>Wind: {weather.wind}km/h</li>
+            </ul>
+          </div>
+          <div className="col align-self-center">
+            <img src={weather.icon} alt="weather icon"></img>
+          </div>
+        </div>
       </div>
     );
   } else {
