@@ -27,10 +27,20 @@ export default function Weather() {
   }
   let form = (
     <form className="App" onSubmit={handleSubmit}>
-      <input type="search" className="searchBar" onChange={updateCity}></input>
+      <input
+        type="search"
+        className="searchBar"
+        pattern=".{5,}"
+        required
+        title="5 character minimum"
+        onChange={updateCity}
+      ></input>
       <input
         type="submit"
-        value="Submit"
+        value="Search"
+        pattern=".{5,}"
+        required
+        title="5 character minimum"
         className="btn btn-outline-light"
       ></input>
     </form>
