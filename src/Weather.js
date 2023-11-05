@@ -30,17 +30,17 @@ export default function Weather() {
       <input
         type="search"
         className="searchBar"
-        pattern=".{5,}"
+        pattern=".{3,}"
         required
-        title="5 character minimum"
+        title="3 character minimum"
         onChange={updateCity}
       ></input>
       <input
         type="submit"
         value="Search"
-        pattern=".{5,}"
+        pattern=".{3,}"
         required
-        title="5 character minimum"
+        title="3 character minimum"
         className="btn btn-outline-light"
       ></input>
     </form>
