@@ -29,7 +29,7 @@ export default function Weather() {
     <form className="App" onSubmit={handleSubmit}>
       <input
         type="search"
-        className="searchBar"
+        className="searchBar shadow"
         pattern=".{3,}"
         required
         title="3 character minimum"
@@ -41,7 +41,7 @@ export default function Weather() {
         pattern=".{3,}"
         required
         title="3 character minimum"
-        className="btn btn-outline-light"
+        className="btn btn-outline-light shadow"
       ></input>
     </form>
   );
