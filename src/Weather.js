@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
+import Degrees from "./Degrees.js";
 
-export default function Weather() {
+export default function Weather(props) {
   let [city, setCity] = useState("");
   let [loaded, setLoaded] = useState(false);
   let [weather, setWeather] = useState({});
@@ -53,7 +54,7 @@ export default function Weather() {
           <div className="col">
             <ul className="Description">
               <li className="cityName">{weather.name}</li>
-              <li>{Math.round(weather.temperature)}°C</li>
+              <Degrees celsius={weather.temperature} />
               <li>{weather.description}</li>
               <li>Humidity: {weather.humidity}%</li>
               <li>Wind: {weather.wind}km/h</li>
