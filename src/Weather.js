@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
-import Degrees from "./Degrees.js";
+import Degrees from "./degrees";
 
 export default function Weather(props) {
   let [city, setCity] = useState("");

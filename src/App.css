@@ -36,3 +36,8 @@
   margin: 30px auto;
   max-width: 500px;
 }
+
+.unit a {
+  color: #d84315;
+  text-decoration: none;
+}

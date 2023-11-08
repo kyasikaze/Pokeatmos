@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./App.css";
 
 export default function Degrees(props) {
   let [unit, setUnit] = useState("celsius");
@@ -18,7 +19,7 @@ export default function Degrees(props) {
           <span className="unit">
             {" "}
             °C |{" "}
-            <a href="/" onclick={showFahrenheit}>
+            <a href="/" onClick={showFahrenheit}>
               °F
             </a>
           </span>
@@ -32,7 +33,7 @@ export default function Degrees(props) {
         <li>
           {Math.round(fahrenheit)}
           <span className="unit">
-            <a href="/" onclick={showCelsius}>
+            <a href="/" onClick={showCelsius}>
               {" "}
               °C{" "}
             </a>
