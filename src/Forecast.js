@@ -7,7 +7,12 @@ export default function Forecast() {
       <div className="row">
         <div className="col">
           <div className="forecastDay">Thu</div>
-          <div className="forecastIcon">image</div>
+          <div className="forecastIcon">
+            <img
+              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+              className="img-fluid"
+            />
+          </div>
           <div className="forecastTemp">
             <span className="forecastTemp-max">19</span>{" "}
             <span className="forecastTemp-min">10</span>
