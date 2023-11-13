@@ -6,7 +6,7 @@ export default function Forecast() {
     <div className="weatherForecast">
       <div className="row">
         <div className="col">
-          <div className="forecastDay">Hello</div>
+          <div className="forecastDay">Thu</div>
           <div className="forecastIcon">image</div>
           <div className="forecastTemp">
             <span className="forecastTemp-max">19</span>{" "}
