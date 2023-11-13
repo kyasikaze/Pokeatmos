@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 
-export default function Degrees(props) {
+export default function TempDegrees(props) {
   let [unit, setUnit] = useState("celsius");
   function showFahrenheit(event) {
     event.preventDefault();

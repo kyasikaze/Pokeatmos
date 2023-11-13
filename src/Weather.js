@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
-import Degrees from "./Degrees";
+import TempDegrees from "./TempDegrees";
+import Forecast from "./Forecast";
 
 export default function Weather(props) {
   let [city, setCity] = useState("");
@@ -54,7 +55,7 @@ export default function Weather(props) {
           <div className="col">
             <ul className="Description">
               <li className="cityName">{weather.name}</li>
-              <Degrees celsius={weather.temperature} />
+              <TempDegrees celsius={weather.temperature} />
               <li>{weather.description}</li>
               <li>Humidity: {weather.humidity}%</li>
               <li>Wind: {weather.wind}km/h</li>
@@ -63,6 +64,9 @@ export default function Weather(props) {
           <div className="col align-self-center">
             <img src={weather.icon} alt="weather icon"></img>
           </div>
+        </div>
+        <div className="infoBox shadow">
+          <Forecast />
         </div>
       </div>
     );
