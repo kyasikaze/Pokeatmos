@@ -17,6 +17,7 @@ export default function Weather(props) {
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
       icon: response.data.condition.icon_url,
+      coordinates: response.data.coordinates,
     });
   }
   function handleSubmit(event) {
@@ -66,7 +67,7 @@ export default function Weather(props) {
           </div>
         </div>
         <div className="infoBox shadow">
-          <Forecast />
+          <Forecast coordinates={weather.coordinates} />
         </div>
       </div>
     );

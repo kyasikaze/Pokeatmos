@@ -13,13 +13,13 @@ root.render(
       className="logo img-fluid mx-auto d-block"
     />
     <Weather />
-    <footer class="footer">
+    <footer className="footer">
       Open-source
       <a
         href="https://github.com/kyasikaze/weather-app-react"
         target="_blank"
         rel="noopener noreferrer"
-        class="foot"
+        className="foot"
       >
         code
       </a>
