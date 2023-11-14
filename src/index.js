@@ -18,8 +18,7 @@ root.render(
       <a
         href="https://github.com/kyasikaze/weather-app-react"
         target="_blank"
-        without
-        rel="noreferrer"
+        rel="noopener noreferrer"
         class="foot"
       >
         code
