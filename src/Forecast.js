@@ -10,7 +10,7 @@ export default function Forecast() {
           <div className="forecastIcon">
             <img
               src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
-              className="img-fluid"
+              className="img-fluid mx-auto d-block"
               alt="weather icon"
             />
           </div>
