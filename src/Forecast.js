@@ -1,31 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import axios from "axios";
+import ForecastDay from "./ForecastDay";
 
 export default function Forecast(props) {
-  function handleResponse() {}
-  let latitude = props.coordinates.latitude;
-  let longitude = props.coordinates.longitude;
-  let url = `https://api.shecodes.io/weather/v1/forecast?lon=${longitude}&lat=${latitude}&key=b01ffcc8e0f35c8a34d9t4ee3f03o916`;
-  axios.get(url).then(handleResponse);
-  return (
-    <div className="weatherForecast">
-      <div className="row">
-        <div className="col">
-          <div className="forecastDay">Thu</div>
-          <div className="forecastIcon">
-            <img
-              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
-              className="img-fluid"
-              alt="weather icon"
-            />
-          </div>
-          <div className="forecastTemp">
-            <span className="forecastTemp-max">19</span>{" "}
-            <span className="forecastTemp-min">10</span>
-          </div>
+  let [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState(null);
+  function handleResponse(response) {
+    setForecast(response.data.daily);
+    setLoaded(true);
+  }
+  if (loaded) {
+    return (
+      <div className="weatherForecast">
+        <div className="row">
+          {forecast.map(function (dailyForecast, index) {
+            if (index < 5) {
+              return (
+                <div className="col" key={index}>
+                  <ForecastDay data={dailyForecast} />
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    let latitude = props.coordinates.latitude;
+    let longitude = props.coordinates.longitude;
+    let url = `https://api.shecodes.io/weather/v1/forecast?lon=${longitude}&lat=${latitude}&key=b01ffcc8e0f35c8a34d9t4ee3f03o916`;
+    axios.get(url).then(handleResponse);
+  }
 }
