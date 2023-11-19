@@ -3,6 +3,7 @@ import axios from "axios";
 import "./App.css";
 import TempDegrees from "./TempDegrees";
 import Forecast from "./Forecast";
+import WeatherPokemon from "./WeatherPokemon";
 
 export default function Weather(props) {
   let [city, setCity] = useState("");
@@ -63,7 +64,7 @@ export default function Weather(props) {
             </ul>
           </div>
           <div className="col align-self-center">
-            <img src={weather.icon} alt="weather icon"></img>
+            <WeatherPokemon icon={props.data.condition.icon} />
           </div>
         </div>
         <div className="infoBox shadow">

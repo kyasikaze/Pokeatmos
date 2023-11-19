@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import ForecastDay from "./ForecastDay";
+import celebi from "./media/celebi.gif";
 
 export default function Forecast(props) {
   let [loaded, setLoaded] = useState(false);
@@ -16,6 +17,9 @@ export default function Forecast(props) {
   if (loaded) {
     return (
       <div className="weatherForecast">
+        <div>
+          <img src={celebi} alt="celebi" className="mb-3" />
+        </div>
         <div className="row">
           {forecast.map(function (dailyForecast, index) {
             if (index < 5) {
