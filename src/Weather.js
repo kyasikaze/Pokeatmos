@@ -17,7 +17,7 @@ export default function Weather(props) {
       description: response.data.condition.description,
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
-      icon: response.data.condition.icon_url,
+      icon: response.data.condition.icon,
       coordinates: response.data.coordinates,
     });
   }
@@ -64,7 +64,7 @@ export default function Weather(props) {
             </ul>
           </div>
           <div className="col align-self-center">
-            <WeatherPokemon condition={weather} />
+            <WeatherPokemon condition={weather} className="pokemon" />
           </div>
         </div>
         <div className="infoBox shadow">
