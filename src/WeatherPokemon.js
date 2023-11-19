@@ -1,5 +1,6 @@
 import React from "react";
-import altaria from "./media/altaria-mega.gif";
+import altaria from "./media/altaria.gif";
+import altariaMega from "./media/altariaMega.gif";
 import blastoise from "./media/blastoise-mega.gif";
 import charmander from "./media/charmander.gif";
 import glaceon from "./media/glaceon.gif";
@@ -19,8 +20,8 @@ export default function WeatherPokemon(props) {
     "scattered-clouds-night": swirlix,
     "broken-clouds-day": altaria,
     "broken-clouds-night": altaria,
-    "overcast-clouds-day": altaria,
-    "overcast-clouds-night": altaria,
+    "overcast-clouds-day": altariaMega,
+    "overcast-clouds-night": altariaMega,
     "shower-rain-day": squirtle,
     "shower-rain-night": squirtle,
     "rain-day": blastoise,
