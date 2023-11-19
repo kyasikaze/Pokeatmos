@@ -64,7 +64,7 @@ export default function Weather(props) {
             </ul>
           </div>
           <div className="col align-self-center">
-            <WeatherPokemon icon={props.data.condition.icon} />
+            <WeatherPokemon condition={weather} />
           </div>
         </div>
         <div className="infoBox shadow">

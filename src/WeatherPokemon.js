@@ -33,7 +33,6 @@ export default function WeatherPokemon(props) {
     <img
       src={iconMapping[props.condition.icon]}
       alt={props.condition.description}
-      animate={true}
     />
   );
 }
